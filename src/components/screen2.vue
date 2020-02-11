@@ -1,27 +1,12 @@
 <template>
     <div class="screen">
-        Votre nom est : {{name}}
-        <input id="name" type="text" v-model="name">
-        <button @click="increment">+</button>
+        Ooooh alors vous vous appelez  {{$store.state.name}}
     </div>
 </template>
 
 <script>
   export default {
-    name: 'screen1',
-    data: function () {
-      return {
-        name: null,
-      }
-    },
-    methods: {
-      increment() {
-        this.$store.dispatch("setName", {
-          name: 'test'
-        });
-        console.log(this.$store.state.name);
-      }
-    }
+    name: 'screen2',
   }
 </script>
 

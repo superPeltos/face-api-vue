@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <screen1 />
+    <screen2 v-if="$store.state.name"  />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import screen1 from './components/screen1.vue'
+import screen2 from './components/screen2.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    screen1,screen2
   }
 }
 </script>
